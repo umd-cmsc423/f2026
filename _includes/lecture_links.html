@@ -1,0 +1,5 @@
+{% if include.lecture.links %}
+  {% for link in include.lecture.links %}
+  <a class="resource-link" href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | prepend: site.baseurl }}{% endif %}">{{ link.name | replace: '_', ' ' }}</a>
+  {% endfor %}
+{% endif %}

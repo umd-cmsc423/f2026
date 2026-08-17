@@ -1,0 +1,12 @@
+# Generated site and local build state
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
+vendor/bundle/
+
+# Lecture decks are revised during the semester and intentionally stay local
+# until they are explicitly ready to publish.
+static_files/presentations/*.pdf
+
+.DS_Store

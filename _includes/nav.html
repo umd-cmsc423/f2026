@@ -1,0 +1,13 @@
+<ul class="menu">
+  {% for item in site.data.nav.items %}
+  {% assign active = false %}
+  {% if page.url == item.url %}
+    {% assign active = true %}
+  {% elsif item.url != '/' and page.url contains item.url %}
+    {% assign active = true %}
+  {% endif %}
+  <li>
+    <a class="page-link{% if active %} is-active{% endif %}" href="{{ item.url | prepend: site.baseurl }}"{% if active %} aria-current="page"{% endif %}>{{ item.name }}</a>
+  </li>
+  {% endfor %}
+</ul>

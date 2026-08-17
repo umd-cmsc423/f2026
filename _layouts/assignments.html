@@ -1,0 +1,28 @@
+---
+layout: page
+---
+
+{{ content }}
+
+{% if site.data.course.features.assignments_visible and site.assignments.size > 0 %}
+<ol class="assignment-list">
+{% assign ordered_assignments = site.assignments | sort: 'date' %}
+{% for asg in ordered_assignments %}
+  <li>
+    <div>
+      <span class="assignment-label">Project {{ forloop.index }}</span>
+      <a href="{{ asg.url | prepend: site.baseurl }}">{{ asg.title }}</a>
+    </div>
+    {% if asg.due_event %}<span>Due {{ asg.due_event.date | date: "%b %-d" }}</span>{% endif %}
+  </li>
+{% endfor %}
+</ol>
+{% else %}
+<div class="empty-state">
+  <span class="empty-state-mark" aria-hidden="true">01</span>
+  <div>
+    <h2>No assignments have been released</h2>
+    <p>Specifications, starter materials, and deadlines will appear here as projects are assigned.</p>
+  </div>
+</div>
+{% endif %}

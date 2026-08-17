@@ -1,0 +1,23 @@
+{% assign announcements = site.announcements | sort: 'date' | reverse %}
+<section class="section-block updates-section" aria-labelledby="updates">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Latest</p>
+      <h2 id="updates">Course updates</h2>
+    </div>
+  </div>
+  {% if announcements.size > 0 %}
+  <ol class="updates-list">
+    {% for item in announcements limit:5 %}
+    <li>
+      <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%b %-d" }}</time>
+      <div>{{ item.content }}</div>
+    </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <div class="quiet-state">
+    <p>No Fall 2026 announcements yet. Updates will appear here as the semester approaches.</p>
+  </div>
+  {% endif %}
+</section>

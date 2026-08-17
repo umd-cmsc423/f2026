@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <p class="eyebrow">{{ site.data.course.code }} · {{ site.data.course.term }}</p>
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  {% if page.notice %}
+  <aside class="notice" aria-label="Planning notice">
+    <strong>Planning note</strong>
+    <p>{{ page.notice }}</p>
+  </aside>
+  {% endif %}
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+</div>

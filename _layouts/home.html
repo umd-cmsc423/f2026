@@ -1,0 +1,200 @@
+---
+layout: default
+---
+
+<div class="home">
+  <section class="course-hero">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ site.data.course.code }} · {{ site.data.course.term }}</p>
+      <h1>{{ site.course_name }}</h1>
+      <p class="hero-description">{{ site.course_description }}</p>
+      <div class="status-badge"><span aria-hidden="true"></span>{{ site.data.course.status }}</div>
+      <p class="status-detail">{{ site.data.course.status_detail }}</p>
+    </div>
+    <div class="sequence-motif" aria-hidden="true">
+      <svg viewBox="0 0 580 320" role="img" focusable="false">
+        <defs>
+          <linearGradient id="reference-rail-fade" x1="0" x2="1">
+            <stop offset="0" stop-color="#ffffff" stop-opacity="0" />
+            <stop offset="0.1" stop-color="#ffffff" stop-opacity="0.52" />
+            <stop offset="0.9" stop-color="#ffffff" stop-opacity="0.52" />
+            <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+
+        <g class="motif-connectors">
+          <path class="motif-seed-connector" d="M170 124 L170 224" />
+          <path class="motif-seed-connector" d="M290 124 L270 224" />
+          <path class="motif-seed-connector" d="M430 124 L410 224" />
+          <path class="motif-indel-connector" d="M240 124 Q241 181 230 243" />
+          <path class="motif-mismatch-connector" d="M380 124 L360 224" />
+          <circle class="motif-connector-node" cx="170" cy="174" r="3" />
+          <circle class="motif-connector-node" cx="280" cy="174" r="3" />
+          <circle class="motif-connector-node" cx="420" cy="174" r="3" />
+          <circle class="motif-gap-position" cx="230" cy="249" r="5" />
+          <text class="motif-indel-label" x="214" y="173">−1 nt</text>
+          <text class="motif-mismatch-mark" x="370" y="179" text-anchor="middle">×</text>
+        </g>
+
+        <g class="motif-reference-track">
+          <text class="motif-track-label" x="48" y="36">REFERENCE</text>
+          <line class="motif-reference-rail" x1="0" y1="136" x2="580" y2="136" />
+          <text class="motif-end-label motif-reference-end" x="40" y="64">5′</text>
+          <text class="motif-end-label motif-reference-end" x="500" y="64">3′</text>
+          <text class="motif-continuation" x="28" y="106">•••</text>
+          <text class="motif-continuation" x="510" y="106">•••</text>
+
+          <rect class="motif-seed-box" x="130" y="74" width="80" height="50" rx="7" />
+          <rect class="motif-seed-box" x="250" y="74" width="80" height="50" rx="7" />
+          <rect class="motif-seed-box" x="390" y="74" width="80" height="50" rx="7" />
+          <circle class="motif-variant-backdrop" cx="240" cy="99" r="16" />
+          <circle class="motif-variant-backdrop" cx="380" cy="99" r="16" />
+
+          <g class="motif-bases">
+            <text class="motif-flank-base" x="60" y="106">G</text>
+            <text class="motif-flank-base" x="80" y="106">A</text>
+            <text x="100" y="106">T</text>
+            <text x="120" y="106">T</text>
+            <text class="motif-seed-base" x="140" y="106">A</text>
+            <text class="motif-seed-base" x="160" y="106">C</text>
+            <text class="motif-seed-base" x="180" y="106">G</text>
+            <text class="motif-seed-base" x="200" y="106">T</text>
+            <text x="220" y="106">A</text>
+            <text class="motif-variant-base" x="240" y="106">A</text>
+            <text class="motif-seed-base" x="260" y="106">G</text>
+            <text class="motif-seed-base" x="280" y="106">C</text>
+            <text class="motif-seed-base" x="300" y="106">T</text>
+            <text class="motif-seed-base" x="320" y="106">A</text>
+            <text x="340" y="106">T</text>
+            <text x="360" y="106">C</text>
+            <text class="motif-variant-base" x="380" y="106">C</text>
+            <text class="motif-seed-base" x="400" y="106">T</text>
+            <text class="motif-seed-base" x="420" y="106">G</text>
+            <text class="motif-seed-base" x="440" y="106">A</text>
+            <text class="motif-seed-base" x="460" y="106">C</text>
+            <text x="480" y="106">C</text>
+          </g>
+        </g>
+
+        <g class="motif-read-track">
+          <text class="motif-track-label" x="98" y="214">READ</text>
+          <line class="motif-read-rail" x1="91" y1="288" x2="479" y2="288" />
+          <circle class="motif-read-end" cx="91" cy="288" r="4" />
+          <path class="motif-read-arrow" d="M479 288 L469 282 M479 288 L469 294" />
+          <text class="motif-end-label" x="62" y="264">5′</text>
+          <text class="motif-end-label" x="490" y="264">3′</text>
+
+          <rect class="motif-seed-box" x="130" y="224" width="80" height="50" rx="7" />
+          <rect class="motif-seed-box" x="230" y="224" width="80" height="50" rx="7" />
+          <rect class="motif-seed-box" x="370" y="224" width="80" height="50" rx="7" />
+          <circle class="motif-variant-backdrop" cx="360" cy="249" r="16" />
+
+          <g class="motif-bases">
+            <text x="100" y="256">T</text>
+            <text x="120" y="256">T</text>
+            <text class="motif-seed-base" x="140" y="256">A</text>
+            <text class="motif-seed-base" x="160" y="256">C</text>
+            <text class="motif-seed-base" x="180" y="256">G</text>
+            <text class="motif-seed-base" x="200" y="256">T</text>
+            <text x="220" y="256">A</text>
+            <text class="motif-seed-base" x="240" y="256">G</text>
+            <text class="motif-seed-base" x="260" y="256">C</text>
+            <text class="motif-seed-base" x="280" y="256">T</text>
+            <text class="motif-seed-base" x="300" y="256">A</text>
+            <text x="320" y="256">T</text>
+            <text x="340" y="256">C</text>
+            <text class="motif-variant-base" x="360" y="256">G</text>
+            <text class="motif-seed-base" x="380" y="256">T</text>
+            <text class="motif-seed-base" x="400" y="256">G</text>
+            <text class="motif-seed-base" x="420" y="256">A</text>
+            <text class="motif-seed-base" x="440" y="256">C</text>
+            <text x="460" y="256">C</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="section-block" aria-labelledby="course-at-a-glance">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Fall 2026</p>
+        <h2 id="course-at-a-glance">Course at a glance</h2>
+      </div>
+    </div>
+    <dl class="fact-grid">
+      {% for item in site.data.course.logistics %}
+      <div class="fact-card">
+        <dt>{{ item.label }}</dt>
+        <dd>{{ item.value }}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+    {% if site.data.course.links and site.data.course.links.size > 0 %}
+    <div class="quick-links">
+      {% for link in site.data.course.links %}
+      <a class="button-link" href="{{ link.url }}">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+
+  {% include announcements.html %}
+
+  <section class="section-block two-column" aria-labelledby="about-course">
+    <div>
+      <p class="eyebrow">About the course</p>
+      <h2 id="about-course">Algorithms meet biology</h2>
+    </div>
+    <div class="prose-lead">
+      <p>CMSC 423 studies the algorithmic ideas and data structures behind modern bioinformatics and computational genomics.</p>
+      <p>The Fall 2026 syllabus and schedule are being prepared. The inherited course policies remain available under <a href="{{ '/materials/' | prepend: site.baseurl }}">Course Materials</a> while they are reviewed.</p>
+      {{ content }}
+    </div>
+  </section>
+
+  <section class="section-block" aria-labelledby="course-team">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">People</p>
+        <h2 id="course-team">Course team</h2>
+      </div>
+    </div>
+    <div class="people-grid">
+      {% for ins in site.data.people.instructors %}
+      <article class="person-card">
+        {% if ins.profile_pic %}
+        <img src="{{ ins.profile_pic | prepend: site.baseurl }}" alt="" width="72" height="72">
+        {% endif %}
+        <div><span class="person-role">Instructor</span>
+        {% if ins.webpage %}<a href="{{ ins.webpage }}">{{ ins.name }}</a>{% else %}<strong>{{ ins.name }}</strong>{% endif %}</div>
+      </article>
+      {% endfor %}
+      {% assign confirmed_tas = site.data.people.teaching_assistants | where: "confirmed", true %}
+      {% for ta in confirmed_tas %}
+      <article class="person-card">
+        {% if ta.profile_pic %}
+        <img src="{{ ta.profile_pic | prepend: site.baseurl }}" alt="" width="72" height="72">
+        {% endif %}
+        <div><span class="person-role">Teaching assistant</span>
+        {% if ta.webpage %}<a href="{{ ta.webpage }}">{{ ta.name }}</a>{% else %}<strong>{{ ta.name }}</strong>{% endif %}</div>
+      </article>
+      {% endfor %}
+      {% if confirmed_tas.size == 0 %}
+      <article class="person-card person-card-placeholder">
+        <div><span class="person-role">Teaching assistants</span><strong>To be announced</strong></div>
+      </article>
+      {% endif %}
+    </div>
+  </section>
+
+  {% if site.data.course.previous_site %}
+  <aside class="previous-course">
+    <div>
+      <p class="eyebrow">Looking for last semester?</p>
+      <p>Fall 2025 materials remain available as a reference.</p>
+    </div>
+    <a class="text-link" href="{{ site.data.course.previous_site.url }}">{{ site.data.course.previous_site.label }} <span aria-hidden="true">→</span></a>
+  </aside>
+  {% endif %}
+</div>

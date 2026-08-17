@@ -1,0 +1,8 @@
+instructors:
+  - name: Rob Patro
+    profile_pic: /_images/pp/rob.jpg
+
+teaching_assistants:
+  - name: Ming Gao
+    #profile_pic: /_images/pp/rachel.jpg
+    confirmed: true

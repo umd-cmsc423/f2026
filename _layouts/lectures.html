@@ -1,0 +1,40 @@
+---
+layout: page
+---
+
+{{ content }}
+
+{% assign ordered_lectures = site.lectures | sort: 'sequence' %}
+{% assign lecture_groups = ordered_lectures | group_by: 'unit' %}
+
+<div class="lecture-groups">
+{% for group in lecture_groups %}
+  <section class="lecture-unit" aria-labelledby="unit-{{ forloop.index }}">
+    <header class="unit-heading">
+      <span>Unit {{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+      <h2 id="unit-{{ forloop.index }}">{{ group.name }}</h2>
+    </header>
+    <ol class="lecture-list">
+    {% for lecture in group.items %}
+      <li class="lecture-card">
+        <div class="lecture-number" aria-hidden="true">{{ lecture.sequence | prepend: '0' | slice: -2, 2 }}</div>
+        <div class="lecture-copy">
+          <h3>{{ lecture.title }}</h3>
+          <p>{{ lecture.tldr }}</p>
+          {% if site.data.course.features.lecture_dates_visible %}
+          <span class="lecture-date">{{ lecture.date | date: "%a, %b %-d" }}</span>
+          {% endif %}
+        </div>
+        <div class="lecture-resources">
+          {% if lecture.materials_visible or site.data.course.features.release_all_lecture_materials %}
+            {% include lecture_links.html lecture=lecture %}
+          {% else %}
+            <span class="resource-status">Materials coming soon</span>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+    </ol>
+  </section>
+{% endfor %}
+</div>

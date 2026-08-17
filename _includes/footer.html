@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <div>
+      <strong>{{ site.data.course.code }} · {{ site.course_name }}</strong>
+      <p>{{ site.schoolname }} · {{ site.data.course.term }}</p>
+    </div>
+    <div class="footer-links">
+      <a href="{{ site.schoolurl }}">University of Maryland</a>
+      <a href="{{ '/materials/' | prepend: site.baseurl }}">Course policies</a>
+    </div>
+  </div>
+</footer>

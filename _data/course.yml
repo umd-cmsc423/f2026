@@ -1,0 +1,25 @@
+code: CMSC 423
+term: Fall 2026
+status: Course site in preparation
+status_detail: Dates, staff details, and course links will be confirmed before the semester begins.
+
+logistics:
+  - label: Meeting time
+    value: Tu./Thurs. 11AM - 12:15PM
+  - label: Location
+    value: IRB 2207
+  - label: Instructor
+    value: Rob Patro
+  - label: Office hours
+    value: To be announced
+
+links: []
+
+features:
+  assignments_visible: false
+  lecture_dates_visible: false
+  release_all_lecture_materials: false
+
+previous_site:
+  label: Fall 2025 course site
+  url: https://umd-cmsc423.github.io/f2025/
