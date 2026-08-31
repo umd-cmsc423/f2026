@@ -3,7 +3,7 @@ layout: page
 title: Syllabus
 permalink: /materials/
 body_class: syllabus-page
-notice: "Fall 2026 planning draft: some specific information is still being finalized and is subject to change"
+notice: "The breadth of material we cover will be subject to the pace at which we can move; specific topics (though not exams) may still shift slightly."
 ---
 
 <!--{% include image.html url="/_images/cover2.jpg" width=175 align="right" %}-->
