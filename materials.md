@@ -16,7 +16,7 @@ Here you'll find an overview of the course — the material I expect we'll cover
 
 * Course Website : [https://umd-cmsc423.github.io/f2026/](https://umd-cmsc423.github.io/f2026/)
 * Instructor : Rob Patro
-* Instructor office hours: Thurs. 12:30 - 1:30 PM (IRB 3220)
+* Instructor office hours: Tues. 1:00 - 2:00 PM (IRB 3220)
 * Class location: IRB 2207
 * Class days/time: Tuesdays/Thursdays 11:00 AM — 12:15 PM
 * TA : 

@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2025-09-02T4:00:00+4:30
+date: 2026-09-01
 title: Introduction
 sequence: 1
 unit: Foundations
