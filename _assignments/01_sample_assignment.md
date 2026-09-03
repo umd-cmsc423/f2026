@@ -14,7 +14,7 @@ due_event:
 
 **Due: Tues September 10, 2024**  
 
-**Note**: A "skeleton" structure for the project (using Java as the underlying language) has been created [here](https://github.com/umd-cmsc423/F24_A0_sample). It shows how to setup the relevant files, and how e.g. one would use `build.sh` to invoke `javac` to compile the source into a `.class` file and how one would create a script named `fasta_stats` to run the class file.
+**Note**: A "skeleton" structure for the project (using Java as the underlying language) has been created [here](https://github.com/umd-cmsc423/project1_sample). It shows how to setup the relevant files, and how e.g. one would use `build.sh` to invoke `javac` to compile the source into a `.class` file and how one would create a script named `fasta_stats` to run the class file.
 
 You will implement a program for parsing a FASTA format file, computing some basic statistics about the records it contains, and printing these statistics to `stdout` in `JSON` format. 
 
