@@ -1,6 +1,6 @@
 ---
 type: assignment
-date: 2026-09-02T4:00:00+4:30
+date: 2026-09-02T04:00:00-04:00
 title: 'Assignment #1 - Using the command line and parsing input'
 #pdf: /static_files/assignments/asg.pdf
 #attachment: /static_files/assignments/asg.zip

@@ -16,7 +16,7 @@ logistics:
 links: []
 
 features:
-  assignments_visible: false
+  assignments_visible: true
   lecture_dates_visible: false
   release_all_lecture_materials: false
 
