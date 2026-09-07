@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2025-09-09T4:00:00+4:30
+date: 2026-09-08
 title: Computational framing of Biological Problems
 sequence: 2
 unit: Foundations
