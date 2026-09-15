@@ -7,6 +7,7 @@ unit: Exact string matching
 tldr: "Treating strings as numbers & hashing"
 thumbnail: /static_files/presentations/lec.jpg
 published: true
+materials_visible: true
 links: 
     - url: /static_files/presentations/lec_4.pdf
       name: slides
