@@ -1,6 +1,6 @@
 ---
 type: assignment
-date: 2026-09-22
+date: 2026-09-21
 title: "Assignment #2: Simulation and the Z-algorithm"
 #pdf: /static_files/assignments/asg.pdf
 #attachment: /static_files/assignments/asg.zip
@@ -12,7 +12,7 @@ due_event:
     description: 'Assignment #2 due'
 ---
 
-**Due: Oct 6, 2025**  
+**Due: Oct 6, 2026**  
 
 # Overview
 
