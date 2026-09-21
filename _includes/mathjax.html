@@ -1,17 +1,29 @@
 {%- comment -%}
-  Math rendering.
+  Math rendering (MathJax 3).
 
-  Kramdown (the Markdown engine configured in _config.yml) turns `$$...$$`
-  into <script type="math/tex"> / <script type="math/tex; mode=display">
-  elements. MathJax v3 does not understand those tags on its own, so the
-  `find` render action below is replaced with one that picks them up.
-  This is the conversion recipe from the MathJax v3 documentation.
+  Kramdown turns `$$...$$` in the Markdown sources into LaTeX-style
+  delimiters -- `\(...\)` for inline math and `\[...\]` for display math --
+  which is what MathJax 3 scans for by default, so the `tex` block below
+  just states those delimiters explicitly rather than relying on defaults.
+
+  Older kramdown versions instead emit <script type="math/tex"> elements,
+  which MathJax 3 does not understand on its own. The extra `findScript`
+  render action picks those up too, so the site keeps rendering math either
+  way. It is a separate, additionally-named action, so MathJax's own `find`
+  action (the delimiter scanner) still runs -- do not rename it to `find`,
+  which would override the scanner and break `\(...\)`.
 {%- endcomment -%}
 <script>
   window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    },
     options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
       renderActions: {
-        find: [10, function (doc) {
+        findScript: [10, function (doc) {
           var nodes = document.querySelectorAll('script[type^="math/tex"]');
           for (var i = 0; i < nodes.length; i++) {
             var node = nodes[i];
@@ -29,9 +41,6 @@
           }
         }, '']
       }
-    },
-    chtml: {
-      scale: 1.0
     }
   };
 </script>
