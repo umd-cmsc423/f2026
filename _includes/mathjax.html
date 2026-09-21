@@ -1,0 +1,44 @@
+{%- comment -%}
+  Math rendering.
+
+  Kramdown (the Markdown engine configured in _config.yml) turns `$$...$$`
+  into <script type="math/tex"> / <script type="math/tex; mode=display">
+  elements. MathJax v3 does not understand those tags on its own, so the
+  `find` render action below is replaced with one that picks them up.
+  This is the conversion recipe from the MathJax v3 documentation.
+{%- endcomment -%}
+<script>
+  window.MathJax = {
+    options: {
+      renderActions: {
+        find: [10, function (doc) {
+          var nodes = document.querySelectorAll('script[type^="math/tex"]');
+          for (var i = 0; i < nodes.length; i++) {
+            var node = nodes[i];
+            var display = !!node.type.match(/; *mode=display/);
+            var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+            var text = document.createTextNode('');
+            var sibling = node.previousElementSibling;
+            node.parentNode.replaceChild(text, node);
+            math.start = { node: text, delim: '', n: 0 };
+            math.end = { node: text, delim: '', n: 0 };
+            doc.math.push(math);
+            if (sibling && /^MathJax(_[0-9]+)?_Preview$/.test(sibling.className)) {
+              sibling.parentNode.removeChild(sibling);
+            }
+          }
+        }, '']
+      }
+    },
+    chtml: {
+      scale: 1.0
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+<style>
+  /* Inherit the page (and dark-mode) text color, and keep wide display
+     equations from forcing the whole page to scroll sideways. */
+  mjx-container { color: inherit; }
+  mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; padding: 0.2em 0; }
+</style>
