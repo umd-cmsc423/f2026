@@ -21,7 +21,7 @@ Here you'll find an overview of the course — the material I expect we'll cover
 * Class days/time: Tuesdays/Thursdays 11:00 AM — 12:15 PM
 * TA : 
   - Ming Gao (gaoming@umd.edu)
-    - Office Hours: Thurs. 12:30 - 1:30 PM
+    - Office Hours: Thurs. 12:30 - 1:30 PM (AV Williams 4166)
 
 **Note**: In any e-mail correspondence related to the course, please be sure to include the string "[CMSC423-F26]" in the e-mail subject, to ensure 
 that the e-mail receives appropropriate priority and doesn't get routed to SPAM.
