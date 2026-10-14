@@ -1,14 +1,14 @@
 ---
 type: assignment
-date: 2025-10-14T4:00:00+0:00
+date: 2026-10-15
 title: "Assignment #3: Suffix array construction and query"
 #pdf: /static_files/assignments/asg.pdf
 #attachment: /static_files/assignments/asg.zip
 #solutions: /static_files/assignments/asg_solutions.pdf
-published: false
+published: true
 due_event: 
     type: due
-    date: 2025-10-28T4:00:00+4:30
+    date: 2026-10-29
     description: 'Assignment #3 due'
 ---
 
@@ -30,14 +30,14 @@ In the second part of the project, you will implement a program to read your ser
 file, as well as to read an input `FASTA` file containing many queries.  Your program will then produce an 
 output file with the query results in a well-specified output format.
 
-**Note:** Sample data and a project "skeleton" can be found [here](https://github.com/umd-cmsc423/f2025_project3_sample). 
+**Note:** Sample data and a project "skeleton" can be found [here](https://github.com/umd-cmsc423/project3_sample). 
 
 ## Overall structure
 
-You will submit your assignment as a tarball named `CMS423_F25_A3.tar.gz`.  When this tarball is expanded, it should create a
-**single** folder named `CMS423_F25_A3`.  This folder must be created in the directory where the decompression (i.e. `tar xzvf`) is done, and must not be nested inside any other folders. The details of how you structure your "source tree" are up to you, but the following **must** hold (to enable proper automated testing of your programs).
+You will submit your assignment as a tarball named `CMS423_F26_A3.tar.gz`.  When this tarball is expanded, it should create a
+**single** folder named `CMS423_F26_A3`.  This folder must be created in the directory where the decompression (i.e. `tar xzvf`) is done, and must not be nested inside any other folders. The details of how you structure your "source tree" are up to you, but the following **must** hold (to enable proper automated testing of your programs).
 
- * There should be a script at the top-level of `CMS423_F25_A3` called `build.sh`.  This should do whatever is necessary to create 3 executables at the top level (one called `buildsa` and one called `inspectsa` and one called `querysa`).  If you're comfortable with Makefiles, this can just call `make`, or it could simply run the commands necessary to compile your programs and copy them to the top-level directory.  You can assume this script is run in a `bash` shell.
+ * There should be a script at the top-level of `CMS423_F26_A3` called `build.sh`.  This should do whatever is necessary to create 3 executables at the top level (one called `buildsa` and one called `inspectsa` and one called `querysa`).  If you're comfortable with Makefiles, this can just call `make`, or it could simply run the commands necessary to compile your programs and copy them to the top-level directory.  You can assume this script is run in a `bash` shell.
  
  * There should be a README.md file in the top level directory.  This README file should contain the following information.
      
