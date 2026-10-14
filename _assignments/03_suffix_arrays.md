@@ -1,6 +1,6 @@
 ---
 type: assignment
-date: 2026-10-15
+date: 2026-10-14
 title: "Assignment #3: Suffix array construction and query"
 #pdf: /static_files/assignments/asg.pdf
 #attachment: /static_files/assignments/asg.zip
