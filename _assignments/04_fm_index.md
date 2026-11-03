@@ -1,11 +1,11 @@
 ---
 type: assignment
-date: 2025-11-04T12:15:00
+date: 2026-11-03
 title: "Assignment #4: FM-index construction and search"
-published: false
+published: true
 due_event: 
     type: due
-    date: 2025-11-18T23:59:00
+    date: 2026-11-17T23:59:00
     description: 'Assignment #4 due'
 ---
 
@@ -27,9 +27,9 @@ In the second part of the project, you will implement a program to read your ser
 
 ## Overall structure
 
-You will submit your assignment as a tarball named `CMSC423_F25_A4.tar.gz`.  When this tarball is expanded, it should create a **single** folder named `CMSC423_F25_A4`.  This folder must be created in the directory where the decompression (i.e. `tar xzvf`) is done, and must not be nested inside any other folders. The details of how you structure your "source tree" are up to you, but the following **must** hold (to enable proper automated testing of your programs).
+You will submit your assignment as a tarball named `CMSC423_F26_A4.tar.gz`.  When this tarball is expanded, it should create a **single** folder named `CMSC423_F26_A4`.  This folder must be created in the directory where the decompression (i.e. `tar xzvf`) is done, and must not be nested inside any other folders. The details of how you structure your "source tree" are up to you, but the following **must** hold (to enable proper automated testing of your programs).
 
- * There should be a script at the top-level of `CMSC423_F25_A4` called `build.sh`.  This should do whatever is necessary to create 3 executables at the top level (one called `buildfm` and one called `inspectfm` and one called `queryfm`).  If you're comfortable with Makefiles, this can just call `make`, or it could simply run the commands necessary to compile your programs and copy them to the top-level directory.  You can assume this script is run in a `bash` shell.
+ * There should be a script at the top-level of `CMSC423_F26_A4` called `build.sh`.  This should do whatever is necessary to create 3 executables at the top level (one called `buildfm` and one called `inspectfm` and one called `queryfm`).  If you're comfortable with Makefiles, this can just call `make`, or it could simply run the commands necessary to compile your programs and copy them to the top-level directory.  You can assume this script is run in a `bash` shell.
  
  * There should be a README.md file in the top level directory.  This README file should contain the following information.
      
