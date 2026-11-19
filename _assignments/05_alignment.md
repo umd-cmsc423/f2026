@@ -13,7 +13,7 @@ due_event:
 ---
 
 
-# CMSC 423 Project 5 (pairwise alignment) : Overview
+## Overview
 
 This assignment deals with pairwise alignment of strings.  We covered many different variants of the alignment problem in class.  
 For this project, we will be concerned only with 2; **global** alignment and **fitting** alignment.
